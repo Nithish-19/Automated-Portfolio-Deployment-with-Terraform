@@ -169,11 +169,19 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
-  display: flex;
+.section__pic-container.top-profile {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  border-radius: 50%; /* Ensures the container is circular */
+  overflow: hidden; /* Prevents image overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+.top-profile-pic {
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures proper scaling */
+  object-fit: cover; /* Crops the image properly */
 }
 
 .section__text {
@@ -264,70 +272,78 @@ section {
 /* ABOUT SECTION */
 
 #about {
+  margin-top: 1rem; /* Adjust the value as needed to create the desired spacing */
   position: relative;
+  display: flex; /* Horizontal alignment of image and text */
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers vertically by default */
+  gap: 4rem; /* Space between image and text */
+  padding: 4rem; /* Outer padding for the section */
 }
 
+/* Image and Text Container */
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex; /* Side-by-side alignment */
+  flex-wrap: wrap; /* Stacks on smaller screens */
+  gap: 4rem; /* Space between image and text */
+  align-items: flex-start; /* Aligns content to the top */
+  justify-content: center; /* Centers content horizontally */
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
+/* Image Container */
+.section__pic-container.about-profile {
+  width: 100%; /* Fully responsive */
+  max-width: 400px; /* Maximum size for image container */
+  aspect-ratio: 1 / 1; /* Ensures a perfect square */
+  overflow: hidden; /* Prevents overflow */
+  border-radius: 50%; /* Circle (remove if square is needed) */
+  display: flex; /* Aligns image inside the container */
+  align-items: center; /* Centers image vertically */
+  justify-content: center; /* Centers image horizontally */
+  background-color: #f4f4f4; /* Background color for empty space */
+  margin-top: -1.5rem; /* Slight adjustment upward */
+  margin-left: -1.5rem; /* Slight adjustment to the left */
+  position: relative; /* Allows fine-tuning with positioning */
+  transform: translate(-20px, -1px); /* Moves the image slightly left and up */
 }
 
-.about-containers,
-.about-details-container {
-  display: flex;
-}
-
+/* Image Styling */
 .about-pic {
-  border-radius: 2rem;
+  width: 100%; /* Fills the container */
+  height: 100%; /* Matches the container height */
+  object-fit: cover; /* Keeps aspect ratio without distortion */
+  object-position: center; /* Centers the image content */
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
-
+/* Text Container */
 .details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 2.5rem; /* Slightly increase this value */
+  margin-top: 0.5rem; /* Try values like 0.5rem, 1rem, or more for downward movement */
+  flex: 2; /* Takes available space */
+  max-width: 500px; /* Restricts the max size for readability */
+  padding: 2rem; /* Inner spacing for text */
+  background-color: white; /* Optional: White background for contrast */
+  border: 1px solid #a3a3a3; /* Subtle border */
+  border-radius: 1rem; /* Rounded corners */
+  text-align: left; /* Aligns text to the left */
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
+/*SKILLS SECTION */
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-/* EXPERIENCE SECTION */
-
-#experience {
+#SKILLS {
   position: relative;
 }
 
-.experience-sub-title {
+.SKILLS-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.SKILLS-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -339,18 +355,21 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
+  align-items: center;
   justify-content: space-around;
 }
 
 article {
   display: flex;
   width: 10rem;
+  align-items: center;
   justify-content: space-around;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
+  margin: 0 auto;
 }
 
 /* PROJECTS SECTION */
