@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "D:/OneDrive/Desktop/MyPortfolioSite/html-css-js-portfolio-tutorial-2/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

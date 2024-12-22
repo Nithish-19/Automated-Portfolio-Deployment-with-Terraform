@@ -377,6 +377,12 @@ article .icon {
 #projects {
   position: relative;
 }
+.project-title {
+  margin: 1rem;
+  color: black;
+  text-align: left;
+  writing-mode: horizontal-tb;
+}
 
 .color-container {
   border-color: rgb(163, 163, 163);
