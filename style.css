@@ -170,12 +170,13 @@ section {
 }
 
 .section__pic-container.top-profile {
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   margin: auto 0;
   border-radius: 50%; /* Ensures the container is circular */
   overflow: hidden; /* Prevents image overflow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  margin-top: 75px; /* Adjust value as needed */ 
 }
 
 .top-profile-pic {
@@ -270,64 +271,84 @@ section {
 }
 
 /* ABOUT SECTION */
-
 #about {
-  margin-top: 1rem; /* Adjust the value as needed to create the desired spacing */
+  margin-top: 1rem; /* Adjusted for better spacing */
   position: relative;
-  display: flex; /* Horizontal alignment of image and text */
-  flex-wrap: wrap; /* Allows wrapping for responsiveness */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers vertically by default */
-  gap: 4rem; /* Space between image and text */
-  padding: 4rem; /* Outer padding for the section */
+  display: flex; /* Horizontal alignment */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center; /* Centers content */
+  align-items: center; /* Centers vertically */
+  gap: 4rem; /* Reduced space for better balance */
+  padding: 4rem; /* Outer padding */
 }
 
 /* Image and Text Container */
 .about-containers {
-  display: flex; /* Side-by-side alignment */
+  display: flex;
   flex-wrap: wrap; /* Stacks on smaller screens */
-  gap: 4rem; /* Space between image and text */
-  align-items: flex-start; /* Aligns content to the top */
-  justify-content: center; /* Centers content horizontally */
+  gap: 3rem; /* Reduced space for better alignment */
+  align-items: center; /* Aligns content to center */
+  justify-content: center; /* Centers horizontally */
 }
 
 /* Image Container */
 .section__pic-container.about-profile {
-  width: 100%; /* Fully responsive */
-  max-width: 400px; /* Maximum size for image container */
-  aspect-ratio: 1 / 1; /* Ensures a perfect square */
-  overflow: hidden; /* Prevents overflow */
-  border-radius: 50%; /* Circle (remove if square is needed) */
-  display: flex; /* Aligns image inside the container */
-  align-items: center; /* Centers image vertically */
-  justify-content: center; /* Centers image horizontally */
-  background-color: #f4f4f4; /* Background color for empty space */
-  margin-top: -1.5rem; /* Slight adjustment upward */
-  margin-left: -1.5rem; /* Slight adjustment to the left */
-  position: relative; /* Allows fine-tuning with positioning */
-  transform: translate(-20px, -1px); /* Moves the image slightly left and up */
+  width: 100%;
+  max-width: 320px; /* Reduced for better proportion */
+  aspect-ratio: 1 / 1; /* Keeps square shape */
+  overflow: hidden;
+  border-radius: 50%; /* Circular image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  margin-top: 0; /* Removed negative margin */
+  margin-left: 0; /* Removed unnecessary left shift */
+  position: relative;
+  transform: none; /* Removed unnecessary shifting */
 }
 
 /* Image Styling */
 .about-pic {
-  width: 100%; /* Fills the container */
-  height: 100%; /* Matches the container height */
-  object-fit: cover; /* Keeps aspect ratio without distortion */
-  object-position: center; /* Centers the image content */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio */
+  object-position: center;
 }
 
 /* Text Container */
 .details-container {
-  margin-top: 0.5rem;
-  padding-top: 2.5rem; /* Slightly increase this value */
-  margin-top: 0.5rem; /* Try values like 0.5rem, 1rem, or more for downward movement */
-  flex: 2; /* Takes available space */
-  max-width: 500px; /* Restricts the max size for readability */
-  padding: 2rem; /* Inner spacing for text */
-  background-color: white; /* Optional: White background for contrast */
-  border: 1px solid #a3a3a3; /* Subtle border */
-  border-radius: 1rem; /* Rounded corners */
-  text-align: left; /* Aligns text to the left */
+  flex: 1; /* Adjusted for better responsiveness */
+  max-width: 800px; /* Reduced for better readability */
+  padding: 1.5rem; /* Inner spacing for text */
+  background-color: white;
+  border: 1.5px solid #a3a3a3;
+  border-radius: 1rem;
+  text-align: left;
+  margin-bottom: 25px; /* Add space below each paragraph */
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* Reduce spacing */
+    padding: 2rem; /* Reduce padding */
+  }
+
+  .about-containers {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .section__pic-container.about-profile {
+    max-width: 250px; /* Smaller image on mobile */
+  }
+
+  .details-container {
+    max-width: 100%; /* Full width for better readability */
+    text-align: center; /* Center text on mobile */
+  }
 }
 
 /*SKILLS SECTION */
@@ -347,6 +368,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .article-container {
@@ -354,22 +376,26 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;;
 }
 
 article {
   display: flex;
   width: 10rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
   margin: 0 auto;
+  justify-content: center;
+}
+.arrow-container {
+  text-align: center;
 }
 
 /* PROJECTS SECTION */
@@ -403,6 +429,9 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+.arrow-container {
+  text-align: center;
 }
 
 /* CONTACT */
