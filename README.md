@@ -9,4 +9,4 @@ Deployed a **serverless portfolio** on AWS using **Terraform, S3, and CloudFront
 - **Security**: IAM Roles & Policies  
 
 ## 🌎 Live Preview  
-🔗 **[Portfolio Live on CloudFront](https://d3kxse4yv581wx.cloudfront.net/)**  
+🔗 **[Portfolio Live on vercel for faster glance ](https://nithish-portfolio-gamma.vercel.app/)**  
